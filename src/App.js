@@ -1,8 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Index from './Components/Index';
-import Home from './Components/Home';
-import User from './Components/User';
 
 import {
   BrowserRouter as Router, 
@@ -21,16 +18,7 @@ function App() {
     <Link to={'/'}>Home</Link>&nbsp;
     <Link to={'/link'}>Link</Link>
 
-      <Router>
-      <Index />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/experiences" element={<Home />} />
-      </Routes>
-
-    </Router>
-    <User/>
-
+   
     </h1>        </p>
       </header>
     </div>

@@ -1,33 +1,33 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
+import "./App.css";
 import App from './App';
-import Index from './Components/Index';
-import Home from './Components/Home';
-import Nav from './Components/Link';
-import User from './Components/User';
+import Movie from './Components/Movie';
+import movies from './movie.json'
 import {
   BrowserRouter , 
   Routes, 
   Route,
   Link
-} from 'react-router-dom';import React from 'react';
+} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+ // var name = 'usman',
+  //age: {20}
 root.render(
-<React.StrictMode>
-    <BrowserRouter>
-      <Index />
-      <Routes>
-        <Route path="/" element={<Home />} exact/>
-        <Route path="/link" element={<Nav />} />
-      </Routes>
-
-    </BrowserRouter>
-    <User/>
-  </React.StrictMode>
+<>
+<h1>GETTING MOVIE DETAIL FROM MOVIE API WEBAPP</h1>
+{
+movies.map((element) => {
+ return (
+<Movie 
+    imdbID={element.imdbID}
+    Title={element.Title}
+    Year={element.Year}
+    Poster={element.Poster}
+    /> 
+ )
+})
+}
+</>
 );
-// ReactDOM.render(
-
-//   <App /> 
-//   ,document.getElementById('root')
-// );
 

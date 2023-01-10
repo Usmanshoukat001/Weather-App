@@ -24,6 +24,7 @@ movies.map((element) => {
     Title={element.Title}
     Year={element.Year}
     Poster={element.Poster}
+    url={element.url}
     /> 
  )
 })
